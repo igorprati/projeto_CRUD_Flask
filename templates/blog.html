@@ -13,39 +13,39 @@
 </head>
 <body>
    
-        <!-- MENU DE NAVEGAÇÃO -->
-        <header>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-              <div class="container-fluid container">
-                <a class="navbar-brand fw-bold fs-4" href="/">Aluno Blue</a>
-                <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-                  <div class="navbar-nav fs-5">
-                    <a class="nav-link text-center" aria-current="page" href="/">Home</a>
-                    <a class="nav-link text-center" href="#">Grade do Curso</a>
-                    <a class="nav-link text-center" href="#">Nossa formação</a>
-                    <a class="nav-link text-center" href="#">O que fazemos</a>
-                    <a class="nav-link text-center fw-bold active" href="/blog">Blog</a>
-                  </div>
-                </div>
+    <!-- MENU DE NAVEGAÇÃO -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid container">
+            <a class="navbar-brand fw-bold fs-4" href="/">Aluno Blue</a>
+            <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+              <div class="navbar-nav fs-5">
+                <a class="nav-link text-center" aria-current="page" href="/">Home</a>
+                <a class="nav-link text-center" href="#">Grade do Curso</a>
+                <a class="nav-link text-center" href="#">Nossa formação</a>
+                <a class="nav-link text-center" href="#">O que fazemos</a>
+                <a class="nav-link text-center fw-bold active" href="/blog">Blog</a>
               </div>
-            </nav>
-      
-              <div class="hero container py-5">
-                <div class="row align-items-center">
-                  <div class="col-12 col-md-5 text-white p-3">
-                    <h1 class="text-dark fw-bold display-3 text-capitalize">Blog Aluno Blue</h1>
-                    <p class="text-dark fs-4">Aqui você fica por dentro de tudo que acontece no mundo da programação!</p>
-                  </div>
-                  <div class="col-12 col-md-7 text-white p-3">
-                    <img src="/static/images/hero2.png" alt="">
-                  </div>
-                </div>
-              </div> <!-- BANNER -->
-      
-          </header> <!-- BANNER PRINCIPAL -->
+            </div>
+          </div>
+        </nav>
+  
+          <div class="hero container py-5">
+            <div class="row align-items-center">
+              <div class="col-12 col-md-5 text-white p-3">
+                <h1 class="text-dark fw-bold display-3 text-capitalize">Blog Aluno Blue</h1>
+                <p class="text-dark fs-4">Aqui você fica por dentro de tudo que acontece no mundo da programação!</p>
+              </div>
+              <div class="col-12 col-md-7 text-white p-3">
+                <img src="/static/images/hero2.png" alt="">
+              </div>
+            </div>
+          </div> <!-- BANNER -->
+  
+      </header> <!-- BANNER PRINCIPAL -->
       
 
           <!-- SEÇÃO BLOG -->
@@ -56,6 +56,7 @@
             <h4 class="text-secondary fs-3">Fique por dentro!</h4>
             <h2 class="fw-bold fs-1">Todos os artigos do Blog</h2>
             <a href="/create" class="btn btn-success fw-bold mt-3">+ Adicionar Artigo</a>
+            <a href="/" class="btn btn-secondary fw-bold mt-3">Voltar para Home</a>
           </div>
   
             <div class="row cards justify-content-center mx-auto">
@@ -63,7 +64,7 @@
 
                 <div class="col-xl-3 .col-lg-6 col-md-5 mx-3">
                     <div class="card shadow-lg mx-auto my-4" style="max-width: 18rem;">
-                        <img src="{{ post.imagem_url }}" class="card-img-top" alt="...">
+                        <a href="/post/{{ post.id }}"><img src="{{ post.imagem_url }}" class="card-img-top" alt="..."></a>
                         <div class="card-body">
                         <h5 class="card-title fw-bold">{{ post.titulo }}</h5>
                         <p class="card-text">{{ post.assunto }}</p>
@@ -79,7 +80,7 @@
           </div>
         </div>
       </section>
-  
+      
 
     <!-- RODAPÉ DO SITE -->
     <footer class="bg-dark position-absolute w-100 align-items-center position-absolute" style="box-sizing: border-box; margin: 0; padding: 0;">
