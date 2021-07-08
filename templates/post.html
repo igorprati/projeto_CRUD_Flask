@@ -66,6 +66,7 @@
                 <img src="{{ post.imagem_url }}" class="card-img-top" alt="..." style="height: 400px;">
                 <div class="card-body">
                   <h5 class="card-title fw-bold fs-1 px-5">{{ post.titulo }}</h5>
+                  <p class="card-text px-5 fs-5">Criado por {{ post.nome }}</p>
                   <p class="card-text fw-bold fs-4 px-5">{{ post.assunto }}</p>
                   <p class="card-text fs-5 my-5 px-2">{{ post.conteudo }}</p>
                   <a href="/update/{{post.id}}" class="btn btn-primary fw-bold ms-5 mb-3">Editar</a>

@@ -67,6 +67,7 @@
                         <a href="/post/{{ post.id }}"><img src="{{ post.imagem_url }}" class="card-img-top" alt="..."></a>
                         <div class="card-body">
                         <h5 class="card-title fw-bold">{{ post.titulo }}</h5>
+                        <p class="card-text">Criado por: {{ post.nome }}</p>
                         <p class="card-text">{{ post.assunto }}</p>
                         <a href="/post/{{post.id}}" class="btn btn-primary fw-bold">Ver artigo</a>
                         <a href="/update/{{post.id}}" class="btn btn-primary fw-bold">Editar</a>

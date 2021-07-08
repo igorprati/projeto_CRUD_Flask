@@ -24,17 +24,19 @@ db = SQLAlchemy(app)
 class Posts(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     # data_post = db.Column(db.Date, nullable=False)
+    nome = db.Column(db.String(255))
     titulo = db.Column(db.String(255), nullable=False)
     assunto = db.Column(db.String(255), nullable=False)
     imagem_url = db.Column(db.String(255), nullable=False)
     conteudo = db.Column(db.Text, nullable=False)
     
     
-    def __init__(self, titulo, assunto, imagem_url, conteudo): # PRECISA SER NA ORDEM DO FORMULÁRIO
+    def __init__(self, titulo, nome, assunto, imagem_url, conteudo): # PRECISA SER NA ORDEM DO FORMULÁRIO
         self.titulo = titulo
         self.assunto = assunto
         self.imagem_url = imagem_url
         self.conteudo = conteudo
+        self.nome = nome
         
 
     @staticmethod
@@ -108,7 +110,7 @@ def criar_post():
 
     if request.method == 'POST':
         form = request.form
-        post = Posts(form['titulo'], form['assunto'], form['imagem_url'], form['conteudo'])
+        post = Posts(form['titulo'], form['nome'], form['assunto'], form['imagem_url'], form['conteudo'])
         post.save()
         id_atribuido = post.id
 
