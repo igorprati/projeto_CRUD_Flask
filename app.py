@@ -127,7 +127,7 @@ def update(post_id):
     if request.method == 'POST':
         form = request.form
 
-        new_data = Posts(form['titulo'], form['assunto'], form['imagem_url'], form['conteudo'])
+        new_data = Posts(form['titulo'], form['nome'], form['assunto'], form['imagem_url'], form['conteudo'])
 
         post.update(new_data)
         sucesso = True
